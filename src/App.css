@@ -1,0 +1,46 @@
+body {
+  background-color: #0d1117;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #00d8ff;
+}
+
+.bot-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.bot-card {
+  background: #161b22;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bot-card:hover {
+  transform: scale(1.05);
+  background: #1f6feb;
+}
+
+.bot-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
