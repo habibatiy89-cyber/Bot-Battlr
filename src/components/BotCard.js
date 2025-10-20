@@ -17,7 +17,7 @@ function BotCard({ bot, handleClick, handleDelete }) {
             handleDelete(bot);
           }}
         >
-          ❌
+          
         </button>
       )}
     </div>
