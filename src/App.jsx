@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import BotCollection from "./components/BotCollection";
 import YourBotArmy from "./components/YourBotArmy";
-import "./App.css";
 
 function App() {
   const [bots, setBots] = useState([]);
   const [army, setArmy] = useState([]);
 
-  // Fetch bots from db.json
+  // Fetch bots from the JSON server
   useEffect(() => {
-    fetch("http://localhost:3000/bots")
-      .then((res) => res.json())
-      .then((data) => setBots(data))
-      .catch((err) => console.error("Error fetching bots:", err));
-  }, []);
+  fetch("http://localhost:8001/bots")
+    .then((res) => res.json())
+    .then((data) => setBots(data))
+    .catch((err) => console.error("Error fetching bots:", err));
+}, []);
+
 
   // Add bot to army
   const addToArmy = (bot) => {
@@ -29,9 +29,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Bot Battlr</h1>
-      <BotCollection bots={bots} addToArmy={addToArmy} />
-      <YourBotArmy army={army} removeFromArmy={removeFromArmy} />
+      <YourBotArmy army={army} onRemove={removeFromArmy} />
+      <BotCollection bots={bots} onAdd={addToArmy} />
     </div>
   );
 }
