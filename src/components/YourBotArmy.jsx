@@ -10,7 +10,12 @@ function YourBotArmy({ army, onRemove }) {
       ) : (
         <div className="bot-grid">
           {army.map((bot) => (
-            <BotCard key={bot.id} bot={bot} handleClick={() => onRemove(bot)} />
+            <BotCard
+              key={bot.id}
+              bot={bot}
+              handleClick={() => onRemove(bot)}
+              buttonLabel="Remove"
+            />
           ))}
         </div>
       )}

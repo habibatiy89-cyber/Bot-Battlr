@@ -4,10 +4,15 @@ import BotCard from "./BotCard";
 function BotCollection({ bots, onAdd }) {
   return (
     <div className="bot-collection">
-      <h2>Bot Collection</h2>
+      <h2>All Bots</h2>
       <div className="bot-grid">
         {bots.map((bot) => (
-          <BotCard key={bot.id} bot={bot} handleClick={() => onAdd(bot)} />
+          <BotCard
+            key={bot.id}
+            bot={bot}
+            handleClick={() => onAdd(bot)} 
+            buttonLabel="Add"
+          />
         ))}
       </div>
     </div>

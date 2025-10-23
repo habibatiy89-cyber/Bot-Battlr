@@ -8,12 +8,11 @@ function App() {
 
   // Fetch bots from the JSON server
   useEffect(() => {
-  fetch("http://localhost:8001/bots")
-    .then((res) => res.json())
-    .then((data) => setBots(data))
-    .catch((err) => console.error("Error fetching bots:", err));
-}, []);
-
+    fetch("http://localhost:8001/bots")
+      .then((res) => res.json())
+      .then((data) => setBots(data))
+      .catch((err) => console.error("Error fetching bots:", err));
+  }, []);
 
   // Add bot to army
   const addToArmy = (bot) => {

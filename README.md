@@ -22,7 +22,7 @@ License
 
 Demo
 
-(Optional: Add a screenshot or GIF of your app here)
+
 
 Features
 
@@ -48,9 +48,7 @@ db.json – Local database for bots.
 
 Installation
 
-Clone the repository:
 
-git clone <your-repo-url>
 
 
 Navigate to the project folder:
